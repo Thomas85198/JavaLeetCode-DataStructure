@@ -1,52 +1,39 @@
 package leetcode.Easy;
 
-import java.util.ArrayList;
-
 /**
  * 目的：找出前綴一樣的部分
+ * 還不太會...
+ * 
  * @author chienlin
  *
  */
 public class longestCommonPrefix {
 
 	public static void main(String[] args) {
-			
-		String[] strs = {"flower", "flow", "flight"};
+
+		String[] strs = { "flower", "flow", "flight" };
 		longestCommonPrefix obj1 = new longestCommonPrefix();
-		obj1.longestCommonPrefix(strs);
+		System.out.println(obj1.longestCommonPrefix(strs));
 
 	}
-	
+
 	public String longestCommonPrefix(String[] strs) {
-		
-		// 1) 先判斷 字串是否為 空 或是 null
-		if(strs == null || strs.length == 0) {
-			return "";
-		};
-		
-		// 2) 設一個字串預設為 索引值 0
-		String pre = strs[0];
-		// 3) 索引值從 1 開始判斷 如果有就擷取字串
-		int i = 1;
-		// 4) indexOf... 返回相同字串如果沒有則回傳 -1
-		while(i<strs.length) {
-			while(strs[i].indexOf(pre) != 0) {
-				pre = pre.substring(0, pre.length() -1 );
-				i++;
-			}
-		}
-		
-			
-		
-		
-		
-		
-		
-		
-		return pre;
-		
-		
-		
+		// 1) 如果是 null 與 字串陣列長度沒有字
+		 if (strs == null || strs.length == 0) return "";
+		 // 2) 看字的字母
+		    for (int i = 0; i < strs[0].length() ; i++){
+		    	
+		        char c = strs[0].charAt(i);
+		        System.out.println(i + "=" + c);
+		        
+		        for (int j = 1; j < strs.length; j ++) {
+		        	System.out.println(strs[j]);
+		            if (i == strs[j].length() || strs[j].charAt(i) != c)
+		                return strs[0].substring(0, i);             
+		        }
+		    }
+		    return strs[0];
+
 	}
 
 }

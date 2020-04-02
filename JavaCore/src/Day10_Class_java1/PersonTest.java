@@ -2,7 +2,7 @@ package Day10_Class_java1;
 
 /**
  * 
- * 類的結構之三：構造氣（或構造方法、constructor）的使用
+ * 類的結構之三：構造器（或構造方法、constructor）的使用
  * constructor：建設、建造。construction：CCB constructor：建設者
  * 
  * 一、構造器的作用：

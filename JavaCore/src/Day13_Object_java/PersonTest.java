@@ -1,4 +1,4 @@
-package Day12_Inheritence_java4;
+package Day13_Object_java;
 
 /**
  * 面向對象特徵多態性：
@@ -33,6 +33,7 @@ public class PersonTest {
 		man.age = 25;
 		man.earnMoney();
 		// ********************************
+		
 		// 對象的多態性：父類引用指向子類的對象
 		Person p2 = new Man();
 		p2.eat(); // 調的是子類重寫父類的方法
@@ -40,6 +41,11 @@ public class PersonTest {
 		System.out.println(p2.id); // 1001
 		Person p3 = new Woman();
 		
+		System.out.println("*****************************");
+		// 不能調用子類所特有的方法：編譯時，p2是Person類型
+//		p2.earnMoney();
+		p2.name = "Tom";
+	
 		
 		
 	}

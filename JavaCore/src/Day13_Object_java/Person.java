@@ -1,4 +1,4 @@
-package Day12_Inheritence_java4;
+package Day13_Object_java;
 
 public class Person {
 
